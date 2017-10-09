@@ -1,8 +1,8 @@
-# simulacro_JT.sh
+# !/bin/bash
+# simulacro01_JT.sh
 #jt. Octubre 2017
 #
 # JUAN TONDA
-# ASO 
 #
 # CREAR UN MENU para realizar las siguientes opciones: 
 # 1. Crear un grupo

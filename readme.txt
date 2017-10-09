@@ -1,6 +1,7 @@
 Resumen Scripts
 ===============
 
+ simulacro01 y 02 - scripts simulacros de examen 01. menu 02. array
  prueba01.sh - usuario actual (revisar comando who)
  prueba02.sh - listar permisos (el programa está con "echo")
  prueba05.sh - instrucción "select"  PS3= .... 

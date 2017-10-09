@@ -4,7 +4,7 @@
 # declaracion de 2 arrays usuario (nombre de amigos)
 # y telefono (para los telefonos), colocados en orden de los amigos
 #
-# JUAN TONDA. Octubre 2017
+# JUAN TONDA. Octubre 2017. simulacro02 /arrays
 clear
 contador=0
 declare -a usuario=( Alberto Roberto Laura Sergio Cristian Dani )
