@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "MENU"
+echo "1) Generar un listado de todos los ficheros que contiene el directorio root en segundo plano"
+echo "2) Mostrar un listado de todos los usuarios del sistema"
+echo "3) Mostrar el usuario actual"
+echo "4) Salir"
+echo "Introduzca una opcion"
+read opcion
+case $opcion in
+	1) sudo ls -a /root &
+	   ;;
+	2) sudo cat /etc/passwd
+	   ;;
+	3) who -m
+	   ;;
+	4) echo "Salir"
+	   ;;
+esac
