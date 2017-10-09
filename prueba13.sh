@@ -1,4 +1,4 @@
-# jt. Octubre 2017
+# jt. Octubre 2017 (prueba13.sh)
 # ver cuantos dispositivos caracter se encuentran en /dev
 # ver .... bloque
 dir=`pwd`
