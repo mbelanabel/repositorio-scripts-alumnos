@@ -1,0 +1,31 @@
+#script que por medio de un menu permita:
+#comparar los ficheros que el usuario elija, y si son iguales, borrar uno de ellos
+#visualizar la configuracion tcpip
+#salir
+#!/bin/bash
+echo MENU
+echo 1 COMPARAR DOS FICHEROS
+echo 2 VISUALIZAR LA CONFIGURACION TCP/IP
+echo 3 SALIR
+echo "introduzca la opcion"
+read opcion
+echo "la opcion elegida es $opcion"
+case $opcion in 
+1) echo "1 vamos a comparar dos ficheros"
+read -p fichero
+read -p fichero2
+diff $fichero $fichero2
+echo " hemos comparado los dos ficheros"
+
+2) echo "2 vamos a visulaizar la configuracion tcp/ip"
+echo "introduzca el fichero a consultar"
+read fichero
+ifconfig $fichero 
+;;
+
+
+3) echo "3 gracias por utilizar esthe shell-cript"
+;;
+*) echo "opcion incorrecta"
+;;
+esac
