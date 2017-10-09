@@ -1,4 +1,8 @@
-#Script para borrar archivos y directorios
+#Script que, por medio de un menu permitirá:
+#1. Eliminar un archivo. Pediremos al usuario el nombre del fichero.
+#2. Eliminar un directorio. Pediremos al usuario el nombre del directorio.
+#3. Mostrar el directorio actual.
+#4. Salir
 #!/bin/bash
 echo "MENU"
 echo "----------------"
