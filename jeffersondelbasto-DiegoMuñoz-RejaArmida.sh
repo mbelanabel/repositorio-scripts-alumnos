@@ -1,0 +1,47 @@
+#bin/bash 
+#autores Jefferson del basto y Diego Muñoz-Reja Armida.
+clear
+#Creaamos un menu mediante echos
+echo "menu"
+echo "________________________"
+echo
+echo "1) Crea un grupo"
+echo "2) Crea un usuario"
+echo "3) Saber cuantos ficheros hay en /mnt"
+echo "4) Listar los ficheros y 10 segundos depues,meter ese listado en un fichero"
+echo "5) Salir "
+echo "Introduzca una opcion "
+read opcion
+case $opcion in 
+#Añadimos el grupo mediante un addgroup junto con una variable.
+1) echo "Da nombre al Grupo"
+read grupo
+addgroup $grupo
+;;
+#Añadimos el usuario mediante un adduser junto con una variable.
+2) echo "da un nombre al usuario"
+read usuario
+adduser $usuario
+;;
+#Para saber la cantidad de archivos, para ello hacemos un ls de /mnt y
+#lo mandamos a un grep mediante una tuberia, y le decimos al grep que
+#muestre lo que no tenga `/`
+3) echo "Saber cuantos fichero hay en /mnt"
+ls -l /mnt | grep -v /
+;;
+#Mandamos un ls a un archivo cualquiera que borraremos al final del script
+#escribimos el  sleep  y redirigimos el archivo temporal con un cat.
+4) echo "Listar los ficheros y 10 segundos despues meter ese listado en un fichero"
+ls /home/alumno >> temp
+sleep 10
+cat temp >> fichero.txt
+rm -r temp
+;;
+#Para salir escribimos el comando exit y ya.
+5) echo "Salir"
+exit
+;;
+#Mostramos un texto avisando de que esa opcion no esta contemplada por el script
+*) echo "opcion incorrecta"
+;;
+esac
