@@ -3,6 +3,8 @@
 #Comparamos dos ficheros y si son iguales borramos uno
 #Visualizar la configuracion tcp/ip
 #Salir
+#Autor: Santiago
+#Corregido: Ivan Gonzalez
 echo "MENU"
 echo 1 Compara dos ficheros a elegir
 echo 2 Visualiza la configuracion tcp/ip
@@ -11,7 +13,7 @@ read -p "Introduzca la opcion " opcion
 echo "La opcion elegida es $opcion"
 case $opcion in
 1)	echo "1 Comparamos dos ficheros"
-	echo "Intrduzca los ficheros" 
+	echo "Introduzca los ficheros" 
 	read -p "Fichero 1: " fichero1
 	read -p "Fichero 2: " fichero2
 	echo "Comparamos si son iguales"
