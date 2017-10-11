@@ -1,0 +1,15 @@
+#!/bin/bash
+#script de futbol y resultado 
+
+	echo ""
+	read -p "Ingrese un equipo1: " equipo1
+	read -p "Ingrese goles1: " goles1
+	read -p "Ingrese un equipo2: " equipo2
+	read -p "Ingrese goles2: " goles2
+	if [[ "$equipo1" = "Atletico de Madrid" || "$equipo2" = "Atletico de Madrid" ]] 
+	then
+	echo "Ser campeon no es una meta, es una actitud"
+	fi
+	echo "$equipo1: $goles1 ; $equipo2: $goles2" >> acta.txt
+	echo ""
+	echo "GUARDADO!"
