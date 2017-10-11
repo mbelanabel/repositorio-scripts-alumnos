@@ -1,0 +1,20 @@
+#Redacta un script que nos pida el nombre de un usuario y nos avise si ese usuario concreto se conecta al sistema. Mientras no se conecte que nos muestre cada 10 segundos, un mensaje que diga "Usuario **Nombre** no conectado".
+#Adrián Jarne
+#  revisión: Juan T.
+#  puesta de comentarios
+# instrucción principal: until 
+# se ejecuta hasta que el usuario solicitado por "read" introducido a través
+# del comando "who -a (usuarios conectados) comprobando que ya esta conectado 
+# wc -l
+#
+#!/bin/bash
+echo "Introduzca usuario"
+read usuario
+#until [ `who -a | grep $usuario | wc -l` -gt "0" ]
+# hemos eliminado las ", para una mayor efectividad
+until [ `who -a | grep $usuario | wc -l` -gt 0 ]
+do
+sleep 10
+echo "Usuario $usuario no conectado"
+done
+echo El usuario $usuario se ha conectado.

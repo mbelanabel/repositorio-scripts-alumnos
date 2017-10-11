@@ -1,0 +1,15 @@
+#Redacta un script que compruebe si está en el directorio /, si es así muestra llos permisos que tienen los ficheros que contiene, si no, cambia de directorio al directorio /.
+#Adrián Jarne
+#!/bin/bash
+# revision por Juan T . (falta script)
+# guardamos en la variable dir_actual el valor del directorio actual
+#Cuando el valor del directorio actual sea "/" ejecutara "ls -l" y cuando el directorio a
+dir_actual=`pwd`
+if [ "$dir_actual" = "/" ] ; then 
+  ls -l
+else
+cd /
+ls -l
+fi
+read -p "pulsa una tecla ... " p
+cd $dir_actual
