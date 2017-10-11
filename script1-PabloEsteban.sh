@@ -10,14 +10,14 @@ echo "1) Eliminar Archivo"
 echo "2) Eliminar Directorio"
 echo "3) Mostrar Directorio Actual"
 echo "0) Salir"
-echo "Introduzca la ocpión"
+echo "Introduzca la opción"
 read opcion
 case $opcion in
-	1) echo "Introduzca ruta del archivo a eliminar (a partir de /home): "
+	1) echo "Introduzca el nombre del archivo a eliminar (a partir de /home): "
 	read rutaarchivo
 	rm $rutaarchivo
 	;;
-	2) echo "Introduzca ruta del directorio a eliminar (a partir de /home): "
+	2) echo "Introduzca el nombre del directorio a eliminar (a partir de /home): "
 	read rutadirectorio
 	rm -R $rutadirectorio
 	;;
