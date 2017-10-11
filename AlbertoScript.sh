@@ -26,7 +26,8 @@ case $opcion  in
                 ;;
 
 	 4)	echo "Salir"
-		break
+		#fallaba "break" que solo se usa con for, while y until.
+		return
 		;;
 
 esac
