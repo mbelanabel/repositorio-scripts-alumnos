@@ -1,5 +1,10 @@
 #Script que,por medio de un menu, permitira:
+# 1) Visualizar el comando correspondiente al PID1.
+# 2) Consultar la variable \$PATH.
+# 3) Consultar el numero de usuarios conectados.
+# 4) Salir.
 #!/bin/bash
+#Autor: Redjeb Sezguin Rustemov
 echo "MENU"
 echo "1)Visualizar el comando correspondiente al PID1."
 echo "2)Consultar la variable \$PATH."
