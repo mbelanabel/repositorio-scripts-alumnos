@@ -1,5 +1,8 @@
 #/bin/bash
 #Script pide contraseña al usuario
+#Revisado por Andrea_Rioja y Patricia_Davila,correcto
+#Palabra clave: if (Mira si se cumple la condicion)
+
 echo "Bienvenido, para ver configuración de red escriba contraseña"
 
 	read -p "Contraseña: " pass
