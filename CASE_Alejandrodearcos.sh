@@ -5,6 +5,7 @@
 #3. Saber cuántos ficheros hay en /boot.
 #4. Listar los ficheros y 10 segundos despues, meter ese listado en un fichero.
 #5. Salir
+#Corregido por Racksok
 echo "Script para la consulta información del sistema"
 echo "Menú"
 echo "                  "
@@ -19,10 +20,12 @@ read opcion
 case $opcion in
 	1)	echo "Informacion de perfil de usuario"
 		ls -l /home
-		du -b /home
+		#du -b muestra la informacion en bytes lo que puede ser un poco confuso, mejor usar los parametros -BM para verlo en MB
+		du -BM /home
 		;;
 	2)	echo "Se creará un informe con la informacion de los usuarios"
-		ls -l /home | du -b /home > perfuser.txt
+	        #du -b muestra la informacion en bytes lo que puede ser un poco confuso, mejor usar los parametros -BM para verlo en MB
+		ls -l /home | du -BM /home > perfuser.txt
 		echo "informe creado"
 		echo "el informe ha sido guardado se va a mostrar el resultado"
 		sleep 3
@@ -31,7 +34,7 @@ case $opcion in
 	3)	echo "Se va a ver cuantos ficheros hay en el directorio /boot"
 		echo "Hay un total de `find /boot -maxdepth 1 -type f | wc -l ` ficheros en el directorio /boot"
 		;;
-	4)	echo "Se va a proceder al listado de ficheros y directorios del directorio de tabajo del usuario actual"
+	4)	echo "Se va a proceder al listado de ficheros y directorios del directorio de trabajo del usuario actual"
 		ls -l ~/
 		echo "se va a copiar la informacion mostrada por pantalla en el fichero listado.txt"
 		sleep 10
