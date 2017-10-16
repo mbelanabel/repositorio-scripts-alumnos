@@ -1,4 +1,4 @@
-#Crear un menu donde se pueda distinguir las siguientes opciones:
+# Crear un menu donde se pueda distinguir las siguientes opciones:
 # 1) Generarun listado de todos los ficheros que contiene el directorio root en segundo plano
 # 2) Mostrar un listado de todos los usuarios del sistema
 # 3) Mostrar el usuario actual
