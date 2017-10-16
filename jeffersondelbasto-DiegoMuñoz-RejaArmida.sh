@@ -39,7 +39,8 @@ rm -r temp
 ;;
 #Para salir escribimos el comando exit y ya.
 5) echo "Salir"
-exit
+return
+#exit
 ;;
 #Mostramos un texto avisando de que esa opcion no esta contemplada por el script
 *) echo "opcion incorrecta"
