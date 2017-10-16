@@ -4,7 +4,8 @@
 # declaracion de 2 arrays usuario (nombre de amigos)
 # y telefono (para los telefonos), colocados en orden de los amigos
 # ojo: no está correcto. es para para probar las 2 dimensiones
-# al parecer no se puede, se graba secuencial !!??
+# al parecer no se puede, se graba secuencial !!??;
+# de alguna forma hay que separar hasta que índice se puede realizar
 # *** hay que estudiar con detenimiento **
 # JUAN TONDA. Octubre 2017. simulacro/arrays 2 dimensiones
 
