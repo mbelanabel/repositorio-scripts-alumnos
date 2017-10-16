@@ -32,6 +32,9 @@ case $opcion in
  cd /dev
  listar_archivos=`ls`
  caracter=0
+ # otra posible opción para saber los archivos
+ # find  buscar archivos type "c" (carácter) /copia de un script de Alejandro
+ # find /dev -maxdepth 1 -type c | wc -w
  for comprobar_archivo in $listar_archivos
  do 
   if test -c $comprobar_archivo ; then 
