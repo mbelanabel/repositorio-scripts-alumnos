@@ -24,9 +24,9 @@ contador=0
 for valorb in ${usuario[*]}
 do
 	if [ $amigo = $valorb ]; then
-	telefono=${telefono[$contador]}
+	telefono_amigo=${telefono[$contador]}
 fi
 
 	contador=`expr $contador + 1`
 done
-echo "el telefono de $amigo es $telefono"
+echo "el telefono de $amigo es $telefono_amigo"
