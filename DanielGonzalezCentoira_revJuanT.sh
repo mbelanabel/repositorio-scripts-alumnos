@@ -6,7 +6,8 @@
 # keywords: test -c (verificar que el fichero es dispositivo carácter)
 # 
 # se guardan valores en variables 
-# dir  (directorio actual)
+# dir  (GUARDAR EN LA VARIABLE -dir- el directorio actual (valor de pwd; al
+# finalizar el script se vuelve a situar en el directorio de ejecución)
 # listar_archivos (lista de archivos de dev)
 # posteriormente se comprueba con test -c (si es o no es tipo "caracter"
 #
