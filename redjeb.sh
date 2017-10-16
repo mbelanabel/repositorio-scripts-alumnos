@@ -5,6 +5,8 @@
 # 4) Salir.
 #!/bin/bash
 #Autor: Redjeb Sezguin Rustemov
+#Corregido por Sebastian Hurtado
+#Palabras clave: case, ps, $PATH, who -a
 echo "MENU"
 echo "1)Visualizar el comando correspondiente al PID1."
 echo "2)Consultar la variable \$PATH."
