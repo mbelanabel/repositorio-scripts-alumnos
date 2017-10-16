@@ -1,3 +1,4 @@
+# VERSION INCIAL DE ESTE FICHERO: pruebascript-DanielGonzalezCentoira.sh
 #
 #! /bin/bash
 # DanielGonzálezCentoira
