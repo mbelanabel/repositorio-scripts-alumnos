@@ -26,13 +26,17 @@ case $opcion in
 		echo "Introduzca una opcion"
 		read opcion
 		case $opcion in
-			1 |SI|S|si|s|YES|Y|yes|y) echo $dni $direccion $nombre $mote $tel $email > ~/agenda.txt
+			1 |SI|S|si|s|YES|Y|yes|y)
+			echo $dni $direccion $nombre $mote $tel $email > ~/agenda.txt
 			;;
-			2 |NO|N|no|n) echo $dni $direccion $nombre $mote $tel $email >> ~/agenda.txt
+			2 |NO|N|no|n) 
+			echo $dni $direccion $nombre $mote $tel $email >> ~/agenda.txt
 			;;
-			3 |exit) echo "Operacion cancelada, Ha salido de la agenda (Ejecute de nuevo)"
+			3 |exit)
+			echo "Operacion cancelada, Ha salido de la agenda (Ejecute de nuevo)"
 			;;
-			*) echo "Opción incorrecta"
+			*) 
+			echo "Opción incorrecta"
 			;;
 			esac
 			;;
@@ -44,9 +48,12 @@ case $opcion in
 #           echo "Elija una opción"
 #           read opcion
 #           case $opcion
-#			1 |SI|S|si|s|YES|Y|yes|y) echo $dni $direccion $nombre $mote $tel $email > ~/agenda.txt http://es.ccm.net/faq/3031-sed-eliminar-una-o-varias-lineas-de-un-fichero
+#			1 |SI|S|si|s|YES|Y|yes|y) 
+                        echo $dni $direccion $nombre $mote $tel $email > ~/agenda.txt 
+			#http://es.ccm.net/faq/3031-sed-eliminar-una-o-varias-lineas-de-un-fichero sed -i / /
 #			;;
-#			2 |NO|N|no|n) echo "Operación cancelada, Ha salido de la agenda (Ejecute de nuevo)"
+#			2 |NO|N|no|n) 
+                        echo "Operación cancelada, Ha salido de la agenda (Ejecute de nuevo)"
 #			;;
 #			*) echo "Opción incorrecta"
 #			;;
