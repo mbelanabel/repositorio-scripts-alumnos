@@ -22,19 +22,19 @@ echo "Introduzca una opción"
 read opcion
 case $opcion in
 	1) 	echo "Visualizacion de usuarios con contraseñas encriptadas"
-		echo hay un total de `cat /etc/shadow | grep -e '$6' | wc -w` usuarios con contraseñas encriptadas
+		echo hay un total de `sudo cat /etc/shadow | grep -e '$6' | wc -w` usuarios con contraseñas encriptadas
 		echo "GRACIAS POR USAR ESTE SCRIPT"
 	;;
 	2)	echo "Visualización de usuarios deshabilitados"
-		echo hay un total de `cat /etc/shadow | grep -e '!' | wc -w` usuarios deshabilitados
+		echo hay un total de `sudo cat /etc/shadow | grep -e '!' | wc -w` usuarios deshabilitados
 		echo "GRACIAS POR USAR ESTE SCRIPT"
 	;;
 	3)	echo "Visualización de usuarios expirados"
-		echo hay un total de `cat /etc/shadow | grep -e '!!' | wc -w` usuarios expirados
+		echo hay un total de `sudo cat /etc/shadow | grep -e '!!' | wc -w` usuarios expirados
 		echo "GRACIAS POR USAR ESTE SCRIPT"
 	;;
 	4)	echo "Visualización de usuarios que pertenecen a un grupo"
-		echo hay un total de `cat /etc/shadow | grep -e '*' | wc -w` usuarios que pertenecen a un grupo
+		echo hay un total de `sudo cat /etc/shadow | grep -e '*' | wc -w` usuarios que pertenecen a un grupo
 		echo "GRACIAS POR USAR ESTE SCRIPT"
 	;;
 	*) 	echo "OPCIÓN INCORRECTA VUELVA A EJECUTAR EL SCRIPT"
