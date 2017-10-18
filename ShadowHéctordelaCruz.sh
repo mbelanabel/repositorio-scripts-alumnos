@@ -5,7 +5,7 @@ echo "______________________"
 echo "1) Usuarios con contraseña de desactivada"
 echo "2) Usuarios con contraseña expirada"
 echo "3) Usuarios con contraseña de grupo"
-echo "4) Usuarios sin contraseña"
+echo "4) Usuarios con contraseña encriptada"
 echo "5) Salir"
 echo "Introduzca una opción"
 read opcion
