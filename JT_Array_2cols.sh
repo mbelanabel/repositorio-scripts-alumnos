@@ -8,6 +8,8 @@
 # de alguna forma hay que separar hasta que índice se puede realizar
 # *** hay que estudiar con detenimiento **
 # JUAN TONDA. Octubre 2017. simulacro/arrays 2 dimensiones
+# ---- array asociativos para hacer una tabla 2 dimensiones (analizar) , éste no funciona !!
+# hay que retocar para actualizar dicha funcionalidad
 
  #declare -a usuarios
  usuarios[0,1]="Nombres"
