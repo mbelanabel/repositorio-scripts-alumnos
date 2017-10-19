@@ -1,0 +1,13 @@
+#!/bin/bash
+#Array de nombres y telefonos
+#Creo los arrays con declare -a
+#Elementos clave: array -a, bucle for, contador, parametro especial $# (contar numero de parametros.
+#Creo una variable contador y la igualo al numero de elementos# del array. Con # seleccionamos el numero de elementos.
+#Hago un bucle for con la variable i: cuando i sea 0 o menor que el numero de elementos del array nombre, ira sumando 1 al contador, entonces "i" ira pasando por todos los valores del array.
+declare -a nombre=(Paco Juan Pedro Miguel)
+declare -a telefono=(4343 4455 6767 7878)
+cont=${#nombre}
+for ((i=0;i<$cont;i++));
+do
+echo "${nombre[$i]} - ${telefono[$i]}"
+done
