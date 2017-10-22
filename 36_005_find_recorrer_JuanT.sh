@@ -23,6 +23,22 @@
 # VERIFICAR
 # 9.- Borrar todo lo que se ha creado
 # COMPROBAR
+
+# rev. octubre 2017
+# anotación: (no en ejecución) una opción para recorrer por todos los directorios
+# p.e. buscando el fichero "my*.cnf" (todo lo que empiece por "my" y acabe ".cnf")
+#    ls -R -> recorrer "recursivamente" desde donde estemos todo el directorio 
+#    find -name "--- archivo a buscar ---"
+#         -print (para visualizar el archivo encontrado)
+#         -exec grep "bind" {} buscar dentro del archivo encontrado "bind"
+#         \;   cerrar la sentencia
+# !! nos da muchas posibilidades !!
+# puesta en marcha.  
+# *********************************************************************
+#   ls -R | find -name "my*.cnf" -print -exec grep "bind" {} \;
+# *********************************************************************
+
+
 clear
 # 1.-
 mkdir copro
