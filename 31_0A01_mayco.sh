@@ -1,7 +1,7 @@
 #!/home/alumno
 #Redacta un script que compruebe si esta en el directorio /, si es así muestra los permisos que tienen los ficheros que contiene, si no, cambia de directorio /.
 #Autor Mayco Costa
-#Revisado por Andrea Rioja
+#Revisado por Andrea Rioja, Daniel Fernández
 #(1)Fallo, Tiene que ir al directorio raiz para que funcione
 
 echo "Aqui muestra el directorio / y los permisos"
