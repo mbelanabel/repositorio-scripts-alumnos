@@ -15,7 +15,7 @@ error() {
 
 dir=`pwd` #para poder seguir quedando en el mismo directorio de ejecución
 clear
-
+##
 # comprobar el paso de parámetros
 op=0
 if test $# -lt 1
