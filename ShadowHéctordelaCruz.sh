@@ -1,3 +1,6 @@
+
+#Hecho por Héctor de la Cruz
+#Puse el while para que al terminar una de las opciones volviera otra vez al menu y no se saliera del script.
 opcion=0
 while [ $opcion != 5 ] ; do
 echo "MENU"
