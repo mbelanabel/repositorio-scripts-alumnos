@@ -18,10 +18,10 @@ echo "Introduce el nombre de usuario"
 # Queremos saber el $nombre de usuario
 read -p "nombre: " nick
 until [ `who -a | grep $nick | wc -l ` -gt "0" ];
-	do
+do
 	sleep 10
 	echo  "El usuario $nick no esta conectado"
-	done si se cumple nos muestra el usuario $nick con el mensaje de que esta conectado
-	echo  "El usuario $nick esta conectado"
+done #si se cumple nos muestra el usuario $nick con el mensaje de que esta conectado
+echo  "El usuario $nick esta conectado"
 
 
