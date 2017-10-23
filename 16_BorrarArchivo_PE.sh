@@ -13,11 +13,11 @@ echo "0) Salir"
 echo "Introduzca la opción"
 read opcion
 case $opcion in
-	1) echo "Introduzca el nombre del archivo a eliminar (a partir de /home): "
+	1) echo "Introduzca el nombre del archivo a eliminar: "
 	read rutaarchivo
 	rm $rutaarchivo
 	;;
-	2) echo "Introduzca el nombre del directorio a eliminar (a partir de /home): "
+	2) echo "Introduzca el nombre del directorio a eliminar: "
 	read rutadirectorio
 	rm -R $rutadirectorio
 	;;
