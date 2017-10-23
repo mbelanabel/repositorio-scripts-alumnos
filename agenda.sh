@@ -1,95 +1,100 @@
 #!/bin/bash
 
-FICHERO="agenda.txt"
+PS3="Elija una opción: "
+OPCIONES="Añadir Borrar Modificar Consultar Salir"
+select opt in $OPCIONES
+do
+	if [[ $opt = "Añadir" ]]
+	then
+		echo Introduzca su DNI, nombre, primer apellido, segundo apellido, telefono, correo, direccion:
+		read -p "Introduzca el DNI: " DNI
+		read -p "Introduzca el nombre: " nombre
+		read -p "Introduzca el primer apellido: " apellido1
+		read -p "Introduzca el segundo apellido: " apellido2
+		read -p "Introduzca el telefono: " telefono
+		read -p "Introduzca el correo: " correo
+		read -p "Introduzca la dirección: " direccion
+		echo $DNI $nombre $apellido1 $apellido2 $telefono $correo $direccion >> contacto.txt
+		
+	elif [[ $opt = "Borrar" ]]
+	then
+		echo Introduzca el DNI del usuario que desea borrar:
+		read DNID
+		sed -i /$DNID/d /home/alumno/contacto.txt
+		echo "El usuario con DNI $DNID ha sido eliminado."
 
-function Menu
-{
-   echo "_____________MENU_____________"
-   echo "   1. Introducir Contacto"
-   echo "     2. Buscar Contacto"
-   echo "     3. Listar Contactos"
-   echo "         4. Salir"
-}
+	elif [[ $opt = "Modificar" ]]
+	then
+# Esta pendiente de mejora con el comando while
+		opcion=0
+		while [ $opcion != 8 ] ; do
+		echo "Escoja un campo"
+		echo "1) DNI"
+		echo "2) Nombre"
+		echo "3) Primer apellido"
+		echo "4) Segundo apellido"
+		echo "5) Telefono"
+		echo "6) Correo"
+		echo "7) Direccion"
+		echo "8) Salir"
+		echo -n "Seleccione una opcion[1 - 8]: "
+		read opcion
+	#	clear
+		case $opcion in
+		1) read -p "Introduzca el dni del usuario que desea modificar: " DNI
+		read -p "Introduzca el nuevo dato: " DNI2
+		sed -i s/$DNI/$DNI2/g /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		2) read -p "Introduzca el nombre del usuario que desea modificar: " nombre
+		read -p "Introduzca el nuevo dato: " nombre2
+		sed -i s/$nombre/$nombre2/g /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		3) read -p "Introduzca el primer apellido: " apellido1
+		read -p "Introduzca el nuevo dato: " apellido1mod
+		sed -i s/apellido1/apellido1mod /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		4) read -p "Introduzca el segundo apellido: " apellido2
+		read -p "Introduzca el nuevo dato: " apellido2mod
+		sed -i s/$apellido2/$apellido2mod/g /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		5) read -p "Introduzca el telefono que desea modificar: " telefono
+		read -p "Introduzca el nuevo dato: " telefono2
+		sed -i s/$telefono1/$telefono2/g /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		6) read -p "Introduzca el correo que desea modificar: " correo
+		read -p "Introduzca el nuevo dato: " correo2
+		sed -i s/$correo/$correo2/g /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		7) read -p "Introduzca la direccion que desea modificar: " direccion
+		read -p "Introduzca el nuevo dato: " direccion2
+		sed -i s/$direccion/$direccion2/g /home/alumno/contacto.txt
+		echo "Ha vuelto al menu principal"
+		;;
+		8) echo "Salir"
+		echo "Ha vuelto al menu principal"
+		;;
+		*) echo "Opcion incorrecta"	
+		echo "Ha vuelto al menu principal"
+		;;
+esac
+			done
 
-function Introducir
-{
-   if [ -e "agenda.txt" ]; then  # Si el fichero existe...
-      echo "Introduzca datos de la persona: "
-      read -p "Nombre:" NOMBRE
-      read -p "Primer apellido: " APELLIDO1
-      read -p "Segundo apellido: " APELLIDO2
-      read -p "Telefono: " TELEFONO
-	  read -p "Correo: " CORREO
-      # Redireccionamos los datos introducidos al fichero de la agenda
-      echo "$NOMBRE:$APELLIDO1:$APELLIDO2:$TELEFONO:$CORREO" >> $FICHERO
-   else
-      # Si no existe el fichero, damos el mensaje de error
-      echo "No se ha podido acceder al archivo de agenda!"
-   fi
-   
-   echo 
-}
+	elif [[ $opt = "Consultar" ]]
+	then
+		read -p "Introduzca el DNI del usuario que desea consultar: " DNI
+		grep "$DNI" contacto.txt	
 
-function Buscar
-{   
-   if [ -s $FICHERO ]; then
-      echo "Introduzca datos de la persona a buscar: "
-      read -p "Nombre: " NOMBRE
-      read -p "Primer apellido: " APELLIDO1
-   
-      DATOS="$NOMBRE:$APELLIDO1"  # Datos de la busqueda
-      SALIDA=$(grep "$DATOS" $FICHERO)  # Con grep asigna a salida el contenido de la linea
-      echo -e "${SALIDA//:/\n}"  # Cambiamos los ":" por saltos de linea "\n"
-   else
-      echo "El fichero no existe o no contiene entradas en la agenda"
-   fi
-}
-
-function Listar
-{
-   if [ -s $FICHERO ]; then  # Si existe el fichero y contiene datos
-      for linea in $(cat $FICHERO)  # Recorremos cada linea del fichero
-      do
-         echo "__________________"
-         echo -e "${linea//:/\n}"  # Sacamos la linea con formato
-         echo "__________________"
-         echo ""
-         echo "Pulse una tecla..."
-         read
-      done
-   else
-      echo "No existen datos en la agenda"
-   fi
-}
-
-opc=0
-salir=5
-
-while [ $opc -ne $salir ];  # Mientras el valor de $opt es distinto del valor de $salir
-do   
-   clear
-   Menu  # Dibujamos el menu en pantalla
-   read -p "Opcion:..." opc  # Escogemos la opcion deseada
-      
-   if [ $opc -ge 1 ] && [ $opc -le 5 ]; then  # No se por que no funciona el rango
-      clear
-      case $opc in   # Acciones para las diferentes opciones del menu
-
-         1)Introducir   
-            ;;       
-         
-         2)Buscar
-            ;;
-
-         3)Listar
-            ;;
-
-         4)echo   
-            ;;
-      esac
-   else
-      echo "No ha introducido una opcion correcta!!"
-   fi
-   echo "Pulse una tecla..."
-   read
+	elif [[ $opt = "Salir" ]]
+	then
+		echo "FIN"
+		break
+	else
+		echo "Opción errónea."
+	fi
 done
