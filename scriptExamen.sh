@@ -1,44 +1,45 @@
-#! /bin/bash
-#Author: Asiel Ramirez Carral.
-#Revision: Diego Muñoz-Reja Armida.
-#KeyWords: echo, if, else read, then,fi.
+#Author: Diego Muñoz-Reja Armida
+#/bin/bash
+
+#Menu Visible.
 
 clear
+echo
+echo "---------------MENU---------------"
+echo
+echo "1)Eliminar una archivo."
+echo "2)Eliminar Directorio."
+echo "3)Mostrar directorio actual."
+echo "0)Salir."
+echo
+echo "----------------------------------"
+echo
 
-#Introducimos los datos en el script.
+#Menu practico.
 
-echo "El primer equipo es: "
-read equipo1
-echo "El segundo equipo es: "
-read equipo2
-echo "Los goles del primer equipo son: "
-read goles1
-echo "Los goles del segundo equipo son: "
-read goles2
+read opcion
+case $opcion in
 
-#Mandamos los datos a un archivo de texto
+	1)	echo "Escriba el nombre del archivo: "
+		read archivo
 
-echo $equipo1:$goles1:-:$equipo2:$goles2 >> acta.txt
+		rm -r $archivo
+		;;
 
-#Combinando dos if podemos preguntar si el primer equipo es el
-#Atletico, en caso de que no sea asi, preguntamos al si
-#el segundo equipo es el atletico. En caso de que alguno de los
-#dos equipos sea el Atletico, mostrara el mensaje por pantalla de
-#"ser campeon es una actitud" en caso de que ningun equipo sea el
-#Atletico, mostrara el texto de "No hay Atletico :(".
+	2)	echo "Escribe el nombre del Directorio (tenga en cuenta que se borrara su interior): "
+		read directorio
 
-if [ "$equipo1" == "Atletico" ]; then
+		rm -r $directorio
+		;;
 
-		echo "Ser un campeon no es una meta es una actitud"
+	3)	echo "Se muestra el directorio actual por pantalla: "
 
-	else
-		if [ "$equipo2" == "Atletico" ]; then
+		echo $PWD
+		;;
 
-		echo "Ser un campeon no es una meta esuna actitud"
+	0)	echo "Adiosito :D"
 
-		else
+		return
+		;;
 
-		echo "No hay atletico :("
-
-		fi
-fi
+esac
