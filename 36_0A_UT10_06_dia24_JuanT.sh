@@ -3,8 +3,7 @@
 # 6. Script que compruebe si estamos a 24 de este mes, si es así
 # mostrará el texto “Feliz cumplemes”.
 # keyword: estructura de control IF, date +%d (día del mes)
-# //utilizar shift for
-# while hasta que llegue al total de parametros
+
 
 
 clear
