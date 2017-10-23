@@ -14,5 +14,5 @@ if [ $pass = "iesleonardo" ]; then
 	echo "Configuración guardada en el fichero mytcpip.txt"
 	cat mytcpip.txt
 else
-	echo "error"
+	echo "error contraseña incorrecta"
 fi
