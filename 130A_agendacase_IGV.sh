@@ -1,5 +1,6 @@
 #!/bin/bash
 #script original https://github.com/procamora/Scripts-Bash/blob/master/agenda.sh
+#autor: Iván
 
 barra(){
 	clear
