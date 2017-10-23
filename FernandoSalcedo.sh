@@ -8,7 +8,7 @@ echo "Bienvenido, para ver configuración de red escriba contraseña"
 	read -p "Contraseña: " pass
 
 
-	if [ $pass = "iesleonardo" ]; then
+if [ $pass = "iesleonardo" ]; then
 	echo "Correcto"
 	ifconfig > mytcpip.txt
 	echo "Configuración guardada en el fichero mytcpip.txt"
