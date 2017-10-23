@@ -3,6 +3,7 @@
 #2. Eliminar un directorio. Pediremos al usuario el nombre del directorio.
 #3. Mostrar el directorio actual.
 #4. Salir
+#Palabras clave: case
 #!/bin/bash
 echo "MENU"
 echo "----------------"
