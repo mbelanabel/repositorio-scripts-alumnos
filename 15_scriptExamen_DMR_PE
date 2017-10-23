@@ -38,7 +38,7 @@ case $opcion in
 		echo $PWD
 		;;
 
-	0)	echo "Adiosito :D"
+	0)	echo "Adios Adiosito :D"
 
 		return
 		;;
