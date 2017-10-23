@@ -2,6 +2,7 @@
 #Este script nos permitirá generar un listado de todos los ficheros del
 #directorio root en segundo plano, mostrar un listado de todos los usuarios del
 #sistema(existentes) y mostrar el usuario actual
+#palabras clave: case, &
 #!/bin/bash
 echo "Eliga una opcion"
 echo ""
