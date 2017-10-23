@@ -12,6 +12,7 @@ if [ $pass = "iesleonardo" ]; then
 	echo "Correcto"
 	ifconfig > mytcpip.txt
 	echo "Configuración guardada en el fichero mytcpip.txt"
+	cat mytcpip.txt
 else
 	echo "error"
 fi
