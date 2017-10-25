@@ -17,18 +17,14 @@ clear
 # comprobar si el parametro es fichero o directorio     
     if test -f $1; then 
        op=1
-       tipo="fichero"
+       salida="El $1 es un fichero."
      elif test -d $1; then
        op=2
-       tipo="directorio"
+       salida="El $1 es un directorio."
      else
-       salida=" No existe $1 "     
+      salida="ERROR: No existe $1."     
        op=0
     fi 
-    salida="El parametro -- $1 -- es un $tipo."
-   else
-    salida="es solo un parametro"
-    op=0
  fi 
  tipo_mensaje
 

@@ -1,9 +1,13 @@
-#
-#! /bin/bash
+#!/bin/bash
 # (script de refuerzo nº16) ref: 15 (son dispositivos 'caracter')
 # rev. Juan Tonda (24-10-2017)
 # keywords: test -b (verificar que el fichero es dispositivo bloque)
-# 
+# 16.- Realizar un menú 
+# "MENU"
+# "1 Saber cuantos ficheros de dispositivo tipo bloque hay en dev"
+# "2 Ver cuales son y lo que ocupan los perfiles de usuario"
+# "3 Crear informe con esa informacion"
+# "4 Salir"
 # se guardan valores en variables 
 # dir  (directorio actual)
 # listar_archivos (lista de archivos de dev)
@@ -16,14 +20,12 @@
 
 while [ $op -eq 0 ] ; do
 clear
-echo MENU
-echo 1 Saber cuantos ficheros de dispositivo tipo bloque hay en dev
-echo 2 Ver cuales son y lo que ocupan los perfiles de usuario
-echo 3 Crear informe con esa informacion
-echo 4 salir
-echo "Introduce una opcion"
-read opcion
-echo "La opcion seleccionada es $opcion"
+echo "MENU"
+echo "1 Saber cuantos ficheros de dispositivo tipo bloque hay en dev"
+echo "2 Ver cuales son y lo que ocupan los perfiles de usuario"
+echo "3 Crear informe con esa informacion"
+echo "4 Salir"
+read -p "Introduce una opcion" opcion
 case $opcion in
 
 1) echo "Vamos a ver los ficheros que hay"  

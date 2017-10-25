@@ -1,5 +1,5 @@
+#!/bin/bash
 # jt. octubre 2017    
-# !/bin/bash
 # tipo de archivo: 0A 
 # 14. Script que por medio de un menú, y partiendo de un fichero de este tipo:
 # NOMBRE:TELEFONO:DIRECCION

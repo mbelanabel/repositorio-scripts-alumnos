@@ -1,8 +1,15 @@
-#
-#! /bin/bash
+#!/bin/bash
 # (script de refuerzo nº18) 
 # rev. Juan Tonda (24-10-2017)
 # keywords:  df (espacio disponible en disco)
+# 18. Realizar un menu
+#
+#
+# MENU
+# 1.- Visualizar el contenido del directorio HOME (usuario actual)
+# 2.- Visualizar el espacio libre del disco
+# 3.- Usuario NOEL
+# 4.- salir
 # se guardan valores en variables 
 # dir  (directorio actual)
 # listar_archivos (lista de archivos de boot)
@@ -12,13 +19,12 @@
 
 while [ $op -eq 0 ] ; do
 clear
-echo MENU
-echo 1.- Visualizar el contenido del directorio HOME (usuario actual)
-echo 2.- Visualizar el espacio libre del disco
-echo 3.- Usuario NOEL
-echo 4.- salir
-echo "Introduce una opcion"
-read opcion
+echo "MENU"
+echo "1.- Visualizar el contenido del directorio HOME (usuario actual)"
+echo "2.- Visualizar el espacio libre del disco"
+echo "3.- Usuario NOEL"
+echo "4.- Salir"
+read -p "Introduce una opcion" opcion
 echo "La opcion seleccionada es $opcion"
 case $opcion in
 

@@ -1,7 +1,13 @@
-#
-#! /bin/bash
+#!/bin/bash
 # (script de refuerzo nº17) ref: 15
 # rev. Juan Tonda (24-10-2017)
+# 17. Realizar un menu
+# MENU
+# 1.- Ver cuales son y lo que ocupan los perfiles de usuario
+# 2.- Crear informe con esa informacion
+# 3.- Saber cuantos ficheros hay en boot
+# 4.- Listar los archivos, 10 segundos despues pasar un informe de ello
+# 5.- salir
 # keywords: 
 # se guardan valores en variables 
 # dir  (directorio actual)
@@ -12,12 +18,12 @@
 
 while [ $op -eq 0 ] ; do
 clear
-echo MENU
-echo 1.- Ver cuales son y lo que ocupan los perfiles de usuario
-echo 2.- Crear informe con esa informacion
-echo 3.- Saber cuantos ficheros hay en boot
-echo 4.- Listar los archivos, 10 segundos despues pasar un informe de ello
-echo 5.- salir
+echo "MENU"
+echo "1.- Ver cuales son y lo que ocupan los perfiles de usuario"
+echo "2.- Crear informe con esa informacion"
+echo "3.- Saber cuantos ficheros hay en boot"
+echo "4.- Listar los archivos, 10 segundos despues pasar un informe de ello"
+echo "5.- Salir"
 echo "Introduce una opcion"
 read opcion
 echo "La opcion seleccionada es $opcion"
