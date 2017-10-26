@@ -25,7 +25,7 @@ echo "1 Saber cuantos ficheros de dispositivo tipo bloque hay en dev"
 echo "2 Ver cuales son y lo que ocupan los perfiles de usuario"
 echo "3 Crear informe con esa informacion"
 echo "4 Salir"
-read -p "Introduce una opcion" opcion
+read -p "Introduce una opcion " opcion
 case $opcion in
 
 1) echo "Vamos a ver los ficheros que hay"  
@@ -39,15 +39,17 @@ case $opcion in
    caracter=`expr $caracter + 1`
    echo "Dispositivo bloque nº$caracter  : $comprobar_archivo"
   fi
-  echo "total dispositivos bloque: " $caracter
  done
+ echo "total dispositivos bloque: " $caracter
+ read -p "pulsa una tecla para continuar ..."
  ;;
-2) echo "2 vamos a ver cuales son y lo que ocupan los perfiles de usuario"
+2) echo " vamos a ver cuales son y lo que ocupan los perfiles de usuario"
   op=0
   cat /etc/passwd
   perfiles=`ls -l /etc/passwd` 
+  read -p "pulsa una tecla para continuar ..."
   ;;
-3) echo "3 Creamos un informe con la informacion"
+3) echo " Creamos un informe con la informacion"
   cd $dir
   op=0
   echo "total dispositivos carácter: " $caracter $perfiles > "informe.txt"
@@ -59,6 +61,7 @@ case $opcion in
   ;;
 *)
   echo "opcion equivocada"
+ ;;
 esac 
 done 
  cd $dir

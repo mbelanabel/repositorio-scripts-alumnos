@@ -40,13 +40,15 @@ case $opcion in
    caracter=`expr $caracter + 1`
    echo "Dispositivo caracter nº$caracter  : $comprobar_archivo"
   fi
-  echo "Total dispositivos carácter: " $caracter
  done
+  echo "Total dispositivos carácter: " $caracter
+  read -p "pulsa una tecla para continuar ..."
  ;;
 2) echo "PERFILES DE USUARIO"
   op=0
   cat /etc/passwd
   perfiles=`ls -l /etc/passwd` 
+  read -p "pulsa una tecla para continuar ..." 
   ;;
 3) echo "INFORME"
   cd $dir

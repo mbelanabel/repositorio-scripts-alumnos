@@ -14,7 +14,7 @@
 # dir  (directorio actual)
 # listar_archivos (lista de archivos de boot)
 # crear un menú, tal y como aparece a continuación
- dir=`pwd
+ dir=`pwd`
  op=0
 
 while [ $op -eq 0 ] ; do
@@ -24,7 +24,7 @@ echo "1.- Visualizar el contenido del directorio HOME (usuario actual)"
 echo "2.- Visualizar el espacio libre del disco"
 echo "3.- Usuario NOEL"
 echo "4.- Salir"
-read -p "Introduce una opcion" opcion
+read -p "Introduce una opcion " opcion
 echo "La opcion seleccionada es $opcion"
 case $opcion in
 
@@ -35,7 +35,7 @@ case $opcion in
   ;;
 2) echo "Visualizar el espacio disponible en disco"
   op=0
-  df -H | cut -c1-10,31-36
+  df -H | cut -c1-20,35-43 | grep "/dev/sd"
   read -p "pulsa una tecla para continuar ..."
   ;;
 3) echo "Comprobar USUARIO NOEL"
@@ -46,12 +46,14 @@ case $opcion in
     else
      echo "no eres NOEL "
   fi
+  read -p "pulsa una tecla para continuar ..."
   ;;
 4) echo "4 Salir"
   op=1
   ;;
 *)
   echo "opcion equivocada"
+  ;;
 esac 
 done 
- cd $dir
+cd $dir

@@ -13,7 +13,7 @@
 # dir  (directorio actual)
 # listar_archivos (lista de archivos de boot)
 # crear un menú, tal y como aparece a continuación
- dir=`pwd
+ dir=`pwd`
  op=0
 
 while [ $op -eq 0 ] ; do
@@ -26,39 +26,40 @@ echo "4.- Listar los archivos, 10 segundos despues pasar un informe de ello"
 echo "5.- Salir"
 echo "Introduce una opcion"
 read opcion
-echo "La opcion seleccionada es $opcion"
 case $opcion in
 
-1) echo "1 vamos a ver cuales son y lo que ocupan los perfiles de usuario"
+1) echo "Vamos a ver cuales son y lo que ocupan los perfiles de usuario"
   op=0
   usuarios=`cat /etc/passwd`
   perfiles=`ls -l /etc/passwd`
   echo "PERFILES"
-  read -p "pulsa una tecla para mostrarlo ... " pausa
   echo $perfiles
-  echo "USUARIOS" 
   read -p "pulsa una tecla para mostrarlo ... " pausa
+  echo "USUARIOS" 
   echo $usuarios
+  read -p "pulsa una tecla para mostrarlo ... " pausa
   ;;
-2) echo "2 Creamos un informe con la informacion"
+2) echo "Creamos un informe con la informacion (op1)"
   op=0
   echo $perfiles $usuarios > informe.txt
   read -p "pulsa una tecla para continuar ..."
   ;;
-3) echo "3 Ficheros en boot"
+3) echo "Ficheros en boot"
   op=0
   ls /boot | wc -w 
+  read -p "pulsa una tecla para continuar ..."
   ;;
-4) echo "4 Listar ficheros"
+4) echo "Listar ficheros"
   ls /boot 
   sleep 10
   ls /boot > informe.txt  
+  read -p "pulsa una tecla para continuar ..."
   ;;
-5) echo "5 Salir"
+5) echo "Salir"
   op=1
   ;;
 *)
-  echo "opcion equivocada"
+  ;;
 esac 
 done 
  cd $dir

@@ -24,10 +24,12 @@ read -p " Selecciona una opción: " opcion
       ;;
     2) 
       cat /etc/passwd | cut -f1 -d":"
+      read -p "pulsa una tecla para continuar ..."
       ;;
     3)
-      echo "3. usuarios conectados"
+      echo " usuario conectado"
       whoami
+      read -p "pulsa una tecla para continura ..."
       ;;
     4) 
       echo "salir"
