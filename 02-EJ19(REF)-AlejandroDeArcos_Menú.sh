@@ -1,3 +1,9 @@
+#Script que, por medio de un menú, permitirá:
+#1. Crear un grupo.
+#2. Crear un usuario.
+#3. Saber cuántos ficheros de hay en /mnt.
+#4. Listar los ficheros y 10 segundos después, meter ese listado en un fichero.
+#5. Salir.
 #!/bin/bash
 clear
 echo __Menú__
