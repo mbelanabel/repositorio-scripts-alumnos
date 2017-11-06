@@ -1,12 +1,16 @@
-r
+# autor: 
+# keyword:
+# anotaciones:
 contador=0
 declare -a usuario=( Rodrigo Ruben Carmelo Ico Nira Aitana )
 declare -a telefono=( 111 222 333 444 555 666 )
+
 for valora in ${usuario[*]}
 do
 	echo "El usuario $contador es $valora"
 	contador=`expr $contador + 1`
 done
+
 contador=0
 for valort  in ${telefono[*]}
 do
@@ -16,6 +20,7 @@ done
 
 echo "Introduce el nombre de tu amigo"
 read amigo
+
 contador=0
 for valorb in ${usuario[*]}
 do
