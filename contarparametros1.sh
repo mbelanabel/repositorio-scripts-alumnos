@@ -5,8 +5,8 @@
 # jt.Febrero 2013
 # actualizado: septiembre 2017
 #
-fin=$#
-i=0
+fin=$#  // variable que almacena el número total de parametros
+i=0 // inicializa el contador
 echo "Total parametros: " $#
 while test $i -lt $fin 
 do
