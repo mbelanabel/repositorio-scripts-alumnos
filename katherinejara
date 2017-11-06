@@ -10,6 +10,6 @@
 	then
 	echo "Ser campeon no es una meta, es una actitud"
 	fi
-	echo "$equipo1: $goles1 ; $equipo2: $goles2" >> acta.txt
+	echo "$equipo1: $goles1 : $equipo2: $goles2" >> acta.txt
 	echo ""
 	echo "GUARDADO!"
