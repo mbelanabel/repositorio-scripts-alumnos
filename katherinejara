@@ -11,5 +11,7 @@
 	echo "Ser campeon no es una meta, es una actitud"
 	fi
 	echo "$equipo1: $goles1 : $equipo2: $goles2" >> acta.txt
+	# CAMBIO: el ";" por ":" . aunque no afecta a la ejecución del mismo, se entiende
+	# mejor que todos los campos estén separados por ":".
 	echo ""
 	echo "GUARDADO!"
