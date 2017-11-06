@@ -1,5 +1,9 @@
 #Este es un script con dos arrays
 #!/bin/bash
+# autor:
+# keyword:
+# anotaciones:
+
 clear
 contador=0
 declare -a usuario=( Daniel Juan Sergio Roberto Maria )
