@@ -23,6 +23,7 @@
 # find directorio_salida  -name "*" -exec ./permisos.sh "{}" ";"
 #
 # ejemplo:  find ~/Descargas/Sistemas  -name "*" -exec ./permisos.sh "{}" ";"
+#  otra forma de uso:  find .... -exec ... {} \; -- eliminas "comillas", y colocas una barra invertida
 # asimismo se puede redireccionar a un archivo. (tee archivo, o , > archivo
 # ejecuta permisos.sh, con la sentencia incluida arriba
 #
