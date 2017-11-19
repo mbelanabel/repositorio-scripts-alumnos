@@ -61,7 +61,7 @@ fi
 #
 # case $tipo_permiso in
 # l|t)
-#  columna"l";;
+#  columnal;;
 # r)
 #  columna=2;;
 # w)
