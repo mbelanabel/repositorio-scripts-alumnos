@@ -50,17 +50,23 @@ if test -f $1; then
    echo "$1 no es un archivo"
 fi
 
-
-## probando otra forma (indicando algún parametro más)
+# en fase de pruebas (PRUEBA: quitar "#" , a partir de programa ===
+## probando otra forma (indicando algún parametro más; TIPO DE PERMISO)
+# a nivel usuario
 # tipo_permiso=$2
+# para probar: find .... -exec .programa.sh. {} tipo_permiso \;
+#
+# PROGRAMA
+#==========
+#
 # case $tipo_permiso in
-# l|t|s)
+# l|t)
 #  columna"l";;
 # r)
 #  columna=2;;
 # w)
 #  columna=3;;
-# x
+# x|s)
 #  columna=4;;
 #esac
 #campo=`ls -l $1 | cut -c$columna`
