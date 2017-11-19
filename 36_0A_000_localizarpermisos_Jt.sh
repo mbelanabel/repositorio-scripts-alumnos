@@ -1,4 +1,5 @@
 #./bin/bash
+v1.01
 # script: permisos.sh (para acotar, aunque puede ser válido otro que deseemos)
 # juan tonda. Noviembre 2017
 # versión 1. (para mejorar resultado y ejecución
