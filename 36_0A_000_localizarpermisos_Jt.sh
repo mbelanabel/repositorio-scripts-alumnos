@@ -52,20 +52,20 @@ fi
 
 
 ## probando otra forma (indicando algún parametro más)
-# columna=$2
-# case $columna in
-# 1)
-#  permiso="l";;
-# 2)
-#  permiso="r";;
-# 3)
-#  permiso="w";;
-# 4)
-#  permiso="x";;
+# tipo_permiso=$2
+# case $tipo_permiso in
+# l|t|s)
+#  columna"l";;
+# r)
+#  columna=2;;
+# w)
+#  columna=3;;
+# x
+#  columna=4;;
 #esac
 #campo=`ls -l $1 | cut -c$columna`
 #archivo="Permisos del archivo: $1 :"
-#if [ "$campo"="$permiso" ] ; then
+#if [ "$campo"="$tipo_permiso" ] ; then
 #    salida="$archivo ... $campo"
 #  else
 #    salida=" "
