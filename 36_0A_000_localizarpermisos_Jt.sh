@@ -49,3 +49,26 @@ if test -f $1; then
   else
    echo "$1 no es un archivo"
 fi
+
+
+## probando otra forma (indicando algún parametro más)
+# columna=$2
+# case $columna in
+# 1)
+#  permiso="l";;
+# 2)
+#  permiso="r";;
+# 3)
+#  permiso="w";;
+# 4)
+#  permiso="x";;
+#esac
+#campo=`ls -l $1 | cut -c$columna`
+#archivo="Permisos del archivo: $1 :"
+#if [ "$campo"="$permiso" ] ; then
+#    salida="$archivo ... $campo"
+#  else
+#    salida=" "
+#fi
+# echo $salida
+#
