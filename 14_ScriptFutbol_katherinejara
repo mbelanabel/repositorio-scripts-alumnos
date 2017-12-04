@@ -14,4 +14,4 @@
 	# CAMBIO: el ";" por ":" . aunque no afecta a la ejecución del mismo, se entiende
 	# mejor que todos los campos estén separados por ":".
 	echo ""
-	echo "GUARDADO!"
+	echo "GUARDADO!!"
