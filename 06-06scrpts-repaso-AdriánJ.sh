@@ -2,6 +2,9 @@
 #Adrián Jarne
 #Script que comprueba cuantos parámetros se introducen y si son ficheros.
 #Elementos clave: read, if, elif
+
+# No funciona bien
+
 echo Introduce los ficheros
 read param1
 read param2
