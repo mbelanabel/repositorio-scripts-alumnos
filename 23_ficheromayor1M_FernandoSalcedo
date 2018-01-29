@@ -1,0 +1,10 @@
+
+#!/bin/bash
+#El script esta diseñado para que se muestren los fichero con un tamaño mayor d$
+
+echo "Bienvenido, aqui te mostraremos los ficheros superiores a 1M"
+
+read -p "Introduce la ruta del directorio: " ruta
+
+find $ruta -size +1000k -name "*.*" | wc -l
+
