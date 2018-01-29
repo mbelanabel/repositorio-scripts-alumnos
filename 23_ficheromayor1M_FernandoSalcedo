@@ -9,7 +9,7 @@ read -p "Introduce la ruta del directorio: " ruta
 if [[ -d $ruta ]];
         then
 
-        fich=$(find $ruta -size +100k -name "*.*" | wc -l)
+        fich=$(find $ruta -size +1000k -name "*.*" | wc -l)
 
         echo "Hay $fich fichero/s"
         else
