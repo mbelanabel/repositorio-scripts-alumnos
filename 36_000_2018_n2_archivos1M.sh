@@ -5,7 +5,7 @@
 # mas de 1 M., dado un directorio
 # keyword: Con find combinado size (tamaño: > 1M), type f (archivo)
 #          y du -sh {}, mostrar el archivo con su tamaño
-# Creará el archivo 'salida.txt' en el lugar correspondiente
+# Creará el archivo 'salida.txt' en el lugar correspondiente (ejecución del script)
 #
 clear
 dir=`pwd`
@@ -18,14 +18,10 @@ if test -d $directorio ; then
  pwd
  find -type f -and -size +1M -and -exec du -sh {} \; > salida.txt
  ls -l salida.txt
- echo " " 
- echo " El fichero salida.txt en el directorio " $directorio
- echo " contiene el listado con los archivos mayores de 1M, con"     
- echo " su correspondiente tamaño. "
- echo " "
- echo " Para ver el fichero introduce la siguiente sintaxis:  " 
- echo " cat " $directorio/salida.txt  
+ cp salida.txt $dir
+ rm salida.txt
+ cat $dir/salida.txt  
  cd $dir
 else
- echo " No hay ningún directorio con dicho nombre " $directorio
+ echo " No hay ningún directorio con este nombre " $directorio
 fi
