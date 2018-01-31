@@ -6,9 +6,9 @@
 # keyword: Con find combinado size (tamaño: > 1M), type f (archivo)
 #          y du -sh {}, mostrar el archivo con su tamaño
 # Creará el archivo 'salida.txt' en el lugar correspondiente
-#
+# 
 clear
-dir=`pwd`
+dir=`pwd`   #directorio de trabajo
 #cd /home/juan
 read -p " Directorio que deseas comprobar ? " directorio
 if test -d $directorio ; then
@@ -21,7 +21,6 @@ if test -d $directorio ; then
  cp salida.txt $dir
  rm salida.txt
  cd $dir
- cat salida.txt 
  total=`cat salida.txt | wc -l`
  echo $total "archivos"
 else
