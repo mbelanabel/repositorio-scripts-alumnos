@@ -1,0 +1,46 @@
+#Script que por medio de un menu, permite:
+#1. Visualizar el contenido del directorio home del usuario actual.
+#2. Visualizar el comando correspondiente al PDI1
+#3. Incluir en la variable PATH un directorio home que previamente pedimos al usuario. Si no existe que lo cree
+#4. Mostrar un listado de todos los usuarios del sistema (todos los usuarios que existen).
+#5. Salir
+
+#Author: Diego Muñoz-Reja Armida.
+#/bin/bash
+
+clear
+
+echo "Selecciona una Opcion."
+echo "1) Visualizar contenido del home del usuario actual."
+echo "2) Visualizar el comando con PDI=1"
+echo "3) Incluir en la variable PATH un directorio."
+echo "4) Mostrar listado con todos los usuarios del sistema"
+echo "5) Salir"
+
+read -p  "Introduzca su Opcion: " opt
+
+case $opt in
+
+	1)	echo "1) Visualizar el contenido del HOME del Usuario Actual"
+		ls -l $HOME
+		;;
+	2)	echo "2) Visualizar el comando con PDI=1"
+		ps -ef | head -2
+		;;
+	3)	echo "3) Incluir en Variable PATH en un directorio."
+		read -p "Escriba el directorio: " var1
+		if [ -d $opt ];
+		then
+			PATH=$PATH:$opt
+		else
+			mkdir $opt
+			PATH=$PATH:$opt
+		fi
+		;;
+	4)	echo "4) Listado de todos los usuarios del sistema."
+		cat /etc/passwd | sort | cut -d: -f 1
+		;;
+	5)	echo "5) Salir."
+		;;
+	*)	echo "ERROR - Opcion no contemplada."
+esac
