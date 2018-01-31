@@ -1,0 +1,6 @@
+#Author: Diego Muñoz-Reja Armida
+#Ejercicio 1: Cuenta los ficheros de un directorio dado.
+#/bin/bash
+
+read -p "Introduce la ruta: " var1
+find $var1 -size +1000k | wc -l
