@@ -8,6 +8,6 @@ if [ -z $dir ]; then
 	echo "No has escrito ningun directorio"
 elif  [ -d $dir ]; then
 	find $dir -type f -size +1000k -exec wc -l {} \;
-elid [ -f $dir ]; then
+elif [ -f $dir ]; then
 	echo "Has escrito un archivo y no un directorio"
 fi
