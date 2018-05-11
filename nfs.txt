@@ -1,0 +1,30 @@
+===
+NFS
+===
+
+*** SERVIDOR
+(sudo su)
+#_ apt-get install nfs-kernel-server nfs-common rpcbind (INSTALACIÓN)
+#_ cat /proc/filesystems (nfsd) 
+#_ service nfs-kernel-server status
+
+#_ vi /etc/exports (copiar y modificar) previamente "copiar"
+ punto-montaje ip_accesible(ro|rw) rango_ip/máscara(ro|rw)
+
+#_ chmod 777 rw 755 ro (directorio)
+#_ chown nobody:nogroup (directorio)
+#_ service nfs-kernel-server restart
+#_ chmod 666 rw 644 ro (archivos) ojo: no son ejecutables!
+
+*** CLIENTE
+Linux
+#_ vi /etc/fstab (copiar y modificar) previamente "copiar"
+ ip:recurso punto-montaje (ro rw)
+
+Windows
+- activar característica cliente NFS
+- mount -a anon,noblock,r,casesensitive ip:recurso * (símbolo sistema como "administrador")
+
+
+(ojo: rango de IP’s (subred), en fichero de configuración)
+
