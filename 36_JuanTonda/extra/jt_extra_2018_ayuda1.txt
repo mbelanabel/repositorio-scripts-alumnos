@@ -1,0 +1,10 @@
+ Sintaxis 
+ $0 USUARIO
+
+ DESCRIPCION
+   Muestra "Hasta luego [USUARIO1 USUARIO2 USUARIO3]".
+  CODIGOS DE RETORNO
+  0 Si no hay ningún error
+  1 Si no se ha introducido ningún parámetro.
+  2 Si se ha introducido mas de 3 parametros
+  3 El usuario no está conectado
